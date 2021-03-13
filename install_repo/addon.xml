@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="amai.skin.repo" version="1.0.0" name="Amai Skin Repository" provider-name="Amaimon">
-  <extension point="xbmc.addon.repository" name="Amaimon Skin Repository">
-    <dir>
-      <info compressed="false">https://raw.githubusercontent.com/Amaimoncz/Amai-skins/master/v18/addons.xml</info>
-      <checksum>https://raw.githubusercontent.com/Amaimoncz/Amai-skins/master/v18/addons.xml.md5</checksum>
-      <datadir zip="true">https://raw.githubusercontent.com/Amaimoncz/Amai-skins/master/v18/</datadir>
+<addon id="amai.repo"
+  version="1.0.1"
+  name="Amai Repository"
+  provider-name="Amaimon">
+  <extension point="xbmc.addon.repository"
+    name="Amaimon Repository">
+    <dir minversion="18.9.0">
+      <info compressed="false">https://raw.githubusercontent.com/Amaimoncz/repository-amai/main/v19/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/Amaimoncz/repository-amai/main/v18/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/Amaimoncz/repository-amai/main/v18/</datadir>
+    </dir>
+    <dir minversion="17.9.0" maxversion="18.9.0">
+      <info compressed="false">https://raw.githubusercontent.com/Amaimoncz/repository-amai/main/v18/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/Amaimoncz/repository-amai/main/v18/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/Amaimoncz/repository-amai/main/v18/</datadir>
     </dir>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>Amaimon Repository</summary>
+    <summary>Amaimon repository</summary>
     <description>
-      Contains modified skin Estuary for Kodi v18 and v19
+      Repository for Estuary skins and others plugins
+    </description>
+    <description lang="cs">
+      Repozitář pro Estuary skiny a další doplňky
     </description>
     <platform>all</platform>
+    <language>en cs </language>
   </extension>
 </addon>
