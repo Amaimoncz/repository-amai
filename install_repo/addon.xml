@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="amai.skin.repo" version="1.0.0" name="Amai Skin Repository" provider-name="Amaimon">
+  <extension point="xbmc.addon.repository" name="Amaimon Skin Repository">
+    <dir>
+      <info compressed="false">https://raw.githubusercontent.com/Amaimoncz/Amai-skins/master/v18/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/Amaimoncz/Amai-skins/master/v18/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/Amaimoncz/Amai-skins/master/v18/</datadir>
+    </dir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Amaimon Repository</summary>
+    <description>
+      Contains modified skin Estuary for Kodi v18 and v19
+    </description>
+    <platform>all</platform>
+  </extension>
+</addon>
