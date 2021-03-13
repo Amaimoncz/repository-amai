@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="true"?>
 <addon id="amai-repo"
-  version="1.0.1"
+  version="1.0.10"
   name="Amaimon Repository"
   provider-name="Amaimon">
   <extension point="xbmc.addon.repository" name="Amaimon Repository">
@@ -9,7 +9,7 @@
       <checksum>https://raw.githubusercontent.com/Amaimoncz/repository-amai/main/v19/addons.xml.md5</checksum>
       <datadir zip="true">https://raw.githubusercontent.com/Amaimoncz/repository-amai/main/v19/</datadir>
     </dir>
-    <dir minversion="17.9.0" maxversion="18.9.0">
+    <dir minversion="18.0.0">
       <info compressed="false">https://raw.githubusercontent.com/Amaimoncz/repository-amai/main/v18/addons.xml</info>
       <checksum>https://raw.githubusercontent.com/Amaimoncz/repository-amai/main/v18/addons.xml.md5</checksum>
       <datadir zip="true">https://raw.githubusercontent.com/Amaimoncz/repository-amai/main/v18/</datadir>
@@ -25,5 +25,8 @@
     </description>
     <platform>all</platform>
     <language>en cs </language>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
   </extension>
 </addon>
