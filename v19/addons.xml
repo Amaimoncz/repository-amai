@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<addons>
 <addon id="skin.estuary.SCC.matrix" version="1.0.3" name="Estuary.SCC" provider-name="phil65, Ichabod Fletchman, Hardo">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -176,3 +176,4 @@
 		</assets>
 	</extension>
 </addon>
+</addons>
