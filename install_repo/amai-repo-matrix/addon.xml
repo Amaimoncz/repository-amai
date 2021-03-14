@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="amai-repo-matrix" version="1.0.3" name="Amaimon Repository for Matrix" provider-name="Amaimon">
+  <extension point="xbmc.addon.repository" name="Amaimon Repository for Matrix">
+    <dir>
+      <info>https://raw.githubusercontent.com/Amaimoncz/repository-amai/main/v19/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/Amaimoncz/repository-amai/main/v19/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/Amaimoncz/repository-amai/main/v19/</datadir>
+    </dir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Repository - Kodi Matrix</summary>
+    <summary lang="cs">Repozitář - Kodi Matrix</summary>
+    <description lang="en_GB">Repository for skins and others plugins - Kodi Matrix</description>
+    <description lang="cs">Repozitář pro skiny a další doplňky pro Kodi Matrix</description>
+    <platform>all</platform>
+    <language>en cs</language>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>

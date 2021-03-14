@@ -8,13 +8,12 @@
     </dir>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">Amaimon repository for Kodi Leia</summary>
-    <summary lang="cs">Repozitář obsahuje skiny a dopňky pro Kodi Leia</summary>
-    <description lang="en_GB">Repository for Estuary skins and others plugins - Kodi Leia</description>
-    <description lang="cs">Repozitář pro Estuary skiny a další doplňky - Kodi Leia</description>
+    <summary lang="en_GB">Repository - Kodi Leia</summary>
+    <summary lang="cs">Repozitář - Kodi Leia</summary>
+    <description lang="en_GB">Repository for skins and others plugins - Kodi Leia</description>
+    <description lang="cs">Repozitář pro skiny a další doplňky pro Kodi Leia</description>
     <platform>all</platform>
-    <language>en cs
-    </language>
+    <language>en cs</language>
     <assets>
       <icon>icon.png</icon>
     </assets>
