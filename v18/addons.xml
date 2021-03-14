@@ -133,7 +133,7 @@
     <extension library="service.py" point="xbmc.service" start="login" />
   	<extension point="xbmc.addon.metadata">
 		<summary lang="en">Ready to use widgets for all kind of media types</summary>
-    <description></description>
+        <description></description>
 		<language></language>
 		<platform>all</platform>
 		<license>GPL v2.0</license>
