@@ -558,4 +558,19 @@
 		<value condition="!String.IsEmpty(Listitem.EpgEventIcon)">$INFO[ListItem.EpgEventIcon]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
+	<variable name="MainLabel_Home_Screen">
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),movies)">$LOCALIZE[342]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),tvshows)">$LOCALIZE[20343]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),music)">$LOCALIZE[2]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),disc)">$LOCALIZE[427]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),musicvideos)">$LOCALIZE[20389]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),livetv)">$LOCALIZE[19020]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),radio)">$LOCALIZE[19021]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),games)">$LOCALIZE[15016]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),addons)">$LOCALIZE[24001]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),pictures)">$LOCALIZE[1]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),video)">$LOCALIZE[3]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),favorites)">$LOCALIZE[10134]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),weather)">$LOCALIZE[8]</value>
+	</variable>
 </includes>

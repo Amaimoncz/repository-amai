@@ -14,10 +14,11 @@
 		<param name="item_treshold">0</param>
 		<definition>
 			<control type="label" id="$PARAM[list_id]666">
-				<left>55</left>
-				<top>80</top>
+				<left>95</left>
+				<top>100</top>
 				<width>900</width>
-				<height>90</height>
+				<height>100</height>
+				<font>font36_title</font>
 				<label>$PARAM[label]</label>
 				<shadowcolor>text_shadow</shadowcolor>
 				<visible>$PARAM[visible]</visible>

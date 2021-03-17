@@ -1507,4 +1507,17 @@
 			</control>
 		</focusedlayout>
 	</include>
+	<!-- Label Home_screen -->
+	<include name="MainLabel_Home">
+		<control type="label">
+			<left>0</left>
+			<top>25</top>
+			<width>1820</width>
+			<height>200</height>
+			<font>font_MainMenu</font>
+			<shadowcolor>text_shadow</shadowcolor>
+			<label>$VAR[MainLabel_Home_Screen]</label>
+			<align>center</align>
+		</control>
+	</include>
 </includes>

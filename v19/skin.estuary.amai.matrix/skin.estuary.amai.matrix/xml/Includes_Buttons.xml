@@ -177,6 +177,33 @@
 			</control>
 		</definition>
 	</include>
+	<include name="IconButton_home">
+		<param name="height">95</param>
+		<param name="visible">true</param>
+		<definition>
+			<control type="radiobutton" id="$PARAM[control_id]">
+				<width>95</width>
+				<height>$PARAM[height]</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<onclick>$PARAM[onclick]</onclick>
+				<onclick>$PARAM[onclick_2]</onclick>
+				<font></font>
+				<label>$PARAM[label]</label>
+				<texturefocus colordiffuse="button_focus">buttons/roundbutton-fo.png</texturefocus>
+				<texturenofocus />
+				<radioposx>31</radioposx>
+				<radioposy>0</radioposy>
+				<radiowidth>34</radiowidth>
+				<radioheight>34</radioheight>
+				<textureradioonfocus>$PARAM[icon]</textureradioonfocus>
+				<textureradioonnofocus colordiffuse="white">$PARAM[icon]</textureradioonnofocus>
+				<textureradioofffocus>$PARAM[icon]</textureradioofffocus>
+				<textureradiooffnofocus colordiffuse="white">$PARAM[icon]</textureradiooffnofocus>
+				<visible>$PARAM[visible]</visible>
+			</control>
+		</definition>
+	</include>
 	<include name="BottomMainMenuToggleItem">
 		<param name="height">120</param>
 		<definition>
