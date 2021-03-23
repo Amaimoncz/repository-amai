@@ -133,6 +133,45 @@
 			<label>$INFO[$PARAM[infolabel]]</label>
 		</control>
 	</include>
+	<include name="Widget_Rating"> <!-- Hodnocení u widgetů  v kolečku -->
+      <control type="image">
+        <visible>!String.IsEmpty(ListItem.Rating)</visible>
+        <bottom>65</bottom>
+        <left>3</left>
+        <height>80</height>
+        <width>80</width>
+        <texture background="true" colordiffuse="button_focus">rating_bg.png</texture>
+      </control>
+      <control type="label">
+        <visible>!String.IsEmpty(ListItem.Rating)</visible>
+				<left>3</left>
+				<bottom>65</bottom>
+		   	<width>80</width>
+       	<height>80</height>
+       	<textcolor>white</textcolor>
+			 	<label>$INFO[ListItem.Rating]</label>
+			 	<font>font30_title</font>
+			 	<shadowcolor>text_shadow</shadowcolor>
+		   	<align>center</align>
+       	<aligny>center</aligny>
+		  </control>
+    </include> <!-- hodnocení u widgetů v kolečku -->
+	<include name="Star_Rating"><!-- Hodnocení hvězdy -->
+		<visible>!String.IsEmpty(ListItem.Rating)</visible>
+		<control type="image">
+				<top>10</top>
+				<width>250</width>
+				<height>100</height>
+				<texture flipy="true">overlays/overlayfade.png</texture>
+			</control>
+			<control type="image">
+				<left>5</left>
+				<top>10</top>
+				<height>45</height>
+				<width>240</width>
+				<texture>ratings/star_rating/$INFO[ListItem.Rating].png</texture>
+			</control>
+	</include><!-- Hodnocení hvězdy -->
 	<include name="InfoList">
 		<param name="item_label">$INFO[ListItem.Year,[COLOR button_focus],[/COLOR]  -  ]$INFO[ListItem.Label]</param>
 		<param name="path">$VAR[InfoListPathVar]</param>
@@ -802,7 +841,7 @@
 					<left>0</left>
 					<top>0</top>
 					<width>110%</width>
-					<height>50</height>
+					<height>50</height><!-- úprava výšky ze 110-->
 					<texture>frame/InfoBar.png</texture>
 					<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
 				</control>
@@ -1507,9 +1546,9 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<!-- Label Home_screen -->
-	<include name="MainLabel_Home">
+	<include name="MainLabel_Home"><!-- Label Home_screen -->
 		<control type="label">
+			<visible>!Control.HasFocus(805) | !Control.HasFocus(804) | !Control.HasFocus(802) | !Control.HasFocus(801)</visible>
 			<left>0</left>
 			<top>25</top>
 			<width>1820</width>

@@ -563,3 +563,11 @@ msgstr "Avatar profilu"
 msgctxt "#31167"
 msgid "Animate background"
 msgstr "Animovat pozadí"
+
+msgctxt "#32000"
+msgid "Rating Circle"
+msgstr "Hodnocení kruh"
+
+msgctxt "#32001"
+msgid "Rating Star"
+msgstr "Hodnocení hvězdy"

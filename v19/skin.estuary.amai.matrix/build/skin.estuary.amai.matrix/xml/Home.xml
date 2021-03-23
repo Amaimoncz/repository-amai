@@ -1053,9 +1053,10 @@
 						</item>
 					</content>
 				</control>
-				<control type="group">
+				<control type="group"><!-- Pozadí tlačítek search, update library, settings, poweroff -->
 					<visible>Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804) | Control.HasFocus(805)</visible>
-					<control type="image">
+					<animation effect="slide" start="0,-120" time="100">Visible</animation>
+					<control type="image"><!--pozadí tlačítek vlevo nahoře -->
 						<left>95</left>
 						<top>0</top>
 						<width>275</width>

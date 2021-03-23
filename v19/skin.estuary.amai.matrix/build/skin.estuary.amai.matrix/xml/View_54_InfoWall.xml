@@ -347,6 +347,16 @@
 				<top>-8</top>
 				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
 			</control>
+			<control type="group"> <!-- Hodnocení v kolečku u widgetů -->
+				<left>117</left>
+				<top>-8</top>
+				<include condition="Skin.HasSetting(widget_rating)">Widget_Rating</include>
+			</control> <!-- Hodnocení v kolečku u widgetů -->
+			<control type="group"> <!-- Hodnocení hvězdy -->
+				<left>35</left>
+				<bottom>0</bottom>
+				<include condition="Skin.HasSetting(star_rating)">Star_Rating</include>
+			</control> <!-- Hodnocení hvězdy -->
 			<control type="progress">
 				<left>35</left>
 				<top>350</top>

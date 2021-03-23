@@ -156,9 +156,11 @@
 		<value condition="String.IsEqual(ListItem.Path,addons://all/)">$INFO[ListItem.AddonOrigin,, - ]$INFO[ListItem.AddonVersion]</value>
 		<value>$INFO[ListItem.AddonCreator,, - ]$INFO[ListItem.AddonVersion]</value>
 	</variable>
-	<variable name="RatingSettingLabel2Var">
+	<variable name="RatingSettingLabel2Var"><!-- Hodnocení volba -->
 		<value condition="Skin.HasSetting(circle_rating)">$LOCALIZE[563]</value>
 		<value condition="Skin.HasSetting(circle_userrating)">$LOCALIZE[38018]</value>
+		<value condition="Skin.HasSetting(widget_rating)">$LOCALIZE[32000]</value><!-- hodnocení kruh -->
+		<value condition="Skin.HasSetting(star_rating)">$LOCALIZE[32001]</value><!-- hodnocení hvězdy -->
 		<value>$LOCALIZE[16018]</value>
 	</variable>
 	<variable name="ProfileIdentificationLabel2Var">
@@ -558,19 +560,23 @@
 		<value condition="!String.IsEmpty(Listitem.EpgEventIcon)">$INFO[ListItem.EpgEventIcon]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
-	<variable name="MainLabel_Home_Screen">
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),movies)">$LOCALIZE[342]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),tvshows)">$LOCALIZE[20343]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),music)">$LOCALIZE[2]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),disc)">$LOCALIZE[427]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),musicvideos)">$LOCALIZE[20389]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),livetv)">$LOCALIZE[19020]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),radio)">$LOCALIZE[19021]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),games)">$LOCALIZE[15016]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),addons)">$LOCALIZE[24001]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),pictures)">$LOCALIZE[1]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),video)">$LOCALIZE[3]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),favorites)">$LOCALIZE[10134]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),weather)">$LOCALIZE[8]</value>
+	<variable name="MainLabel_Home_Screen"><!-- Hlavní titulek na home screen uprostřed -->
+		<value condition="Control.HasFocus(805)">$LOCALIZE[653]</value><!-- update library -->
+		<value condition="Control.HasFocus(804)">$LOCALIZE[13016]</value><!-- poweroff menu -->
+		<value condition="Control.HasFocus(802)">$LOCALIZE[5]</value><!-- settings -->
+		<value condition="Control.HasFocus(801)">$LOCALIZE[31001]</value><!-- Search -->
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),movies)">$LOCALIZE[342]</value><!-- Filmy -->
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),tvshows)">$LOCALIZE[20343]</value><!-- Seriály -->
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),music)">$LOCALIZE[2]</value><!-- Hudba -->
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),disc)">$LOCALIZE[427]</value><!-- Disk -->
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),musicvideos)">$LOCALIZE[20389]</value><!-- Hudební videa -->
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),livetv)">$LOCALIZE[19020]</value><!-- live tv -->
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),radio)">$LOCALIZE[19021]</value><!-- Rádio-->
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),games)">$LOCALIZE[15016]</value><!-- Hry -->
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),addons)">$LOCALIZE[24001]</value><!-- Doplnky -->
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),pictures)">$LOCALIZE[1]</value><!-- Obrázky -->
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),video)">$LOCALIZE[3]</value><!-- videa -->
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),favorites)">$LOCALIZE[10134]</value><!-- oblíbené -->
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),weather)">$LOCALIZE[8]</value><!-- počasí -->
 	</variable>
 </includes>
