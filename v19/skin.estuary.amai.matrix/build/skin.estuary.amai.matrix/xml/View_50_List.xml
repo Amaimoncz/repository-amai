@@ -56,7 +56,10 @@
 					<control type="group">
 						<left>291</left>
 						<top>950</top>
-						<include content="RatingCircle">
+						<include content="Badge_Rating" condition="Skin.HasSetting(badge_rating) | Skin.HasSetting(badge_userrating)">
+							<param name="animation" value="True" />
+						</include>
+						<include content="Circle_Rating" condition="Skin.HasSetting(circle_rating)">
 							<param name="animation" value="True" />
 						</include>
 					</control>
@@ -77,10 +80,10 @@
 						<top>560</top>
 						<control type="group">
 							<animation effect="fade" time="0" condition="$PARAM[animation]">VisibleChange</animation>
-							<include content="UserRatingContent" condition="Skin.HasSetting(circle_userrating)">
+							<include content="UserRatingContent" condition="Skin.HasSetting(badge_userrating)">
 								<param name="infolabel" value="MusicPlayer.UserRating" />
 							</include>
-							<include content="UserRatingContent" condition="Skin.HasSetting(circle_rating)">
+							<include content="UserRatingContent" condition="Skin.HasSetting(badge_rating)|Skin.HasSetting(circle_rating)">
 								<param name="infolabel" value="MusicPlayer.Rating" />
 							</include>
 						</control>
@@ -265,7 +268,9 @@
 				<control type="group">
 					<left>273</left>
 					<top>560</top>
-					<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
+					<!-- Zbytečné hodnocení u epizody seriálu -->
+	<!--		<include condition="Skin.HasSetting(badge_rating) | Skin.HasSetting(badge_userrating)">Badge_Rating</include>
+					<include condition="Skin.HasSetting(circle_rating)">Circle_Rating</include> -->
 					<animation effect="slide" end="0,-140" time="0" condition="String.IsEqual(ListItem.DbType,episode)">conditional</animation>
 				</control>
 				<control type="group">

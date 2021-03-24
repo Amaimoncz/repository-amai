@@ -571,3 +571,31 @@ msgstr "Hodnocení kruh"
 msgctxt "#32001"
 msgid "Rating Star"
 msgstr "Hodnocení hvězdy"
+
+msgctxt "#32002"
+msgid "Setting widgets on the main screen"
+msgstr "Nastavení widgetů na hlavní obrazovce"
+
+msgctxt "#32003"
+msgid "Setting widget  SCC content"
+msgstr "Nastavení obsahu widgetu SCC"
+
+msgctxt "#32004"
+msgid "News"
+msgstr "Novinky"
+
+msgctxt "#32005"
+msgid "News dubbed - CZ"
+msgstr "Novinky dabované - CZ"
+
+msgctxt "#32006"
+msgid "News with subtitles"
+msgstr "Novinky s titulky"
+
+msgctxt "#32007"
+msgid "Last added"
+msgstr "Poslední přidané"
+
+msgctxt "#32008"
+msgid "TV tips today"
+msgstr "TV Tipy dnes"

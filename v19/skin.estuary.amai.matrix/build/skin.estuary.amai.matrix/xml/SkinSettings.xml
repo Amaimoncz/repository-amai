@@ -64,7 +64,7 @@
 				<control type="button" id="706">
 					<label>$LOCALIZE[31024]</label>
 					<include>DefaultSettingButton</include>
-					<onclick>Skin.SelectBool(31024, 38018|circle_userrating, 563|circle_rating, 16018|circle_none, 32000|widget_rating, 32001|star_rating)</onclick>
+					<onclick>Skin.SelectBool(31024, 38018|badge_userrating, 563|badge_rating, 16018|circle_none, 32000|circle_rating, 32001|star_rating)</onclick>
 					<label2>$VAR[RatingSettingLabel2Var]</label2>
 				</control>
 				<control type="button" id="707">
@@ -162,6 +162,60 @@
 				<pagecontrol>60</pagecontrol>
 				<ondown>610</ondown>
 				<visible>Container(9000).HasFocus(2)</visible>
+				<control type="label"><!-- Nadpis -->
+          <visible>System.HasAddon(plugin.video.nextup) | System.HasAddon(plugin.video.stream-cinema) | System.HasAddon(plugin.video.stream-cinema-2-release) | System.HasAddon(plugin.video.stream-cinema) | System.HasAddon(plugin.video.iprima.cz) | System.HasAddon(plugin.video.ivysilani.cz)</visible>
+          <textoffsetx>450</textoffsetx>
+          <width>1920</width>
+          <height>50</height>
+          <font>font25_title</font>
+          <aligny>center</aligny>
+          <alignx>center</alignx>
+        	<textcolor>grey</textcolor>
+          <label>$LOCALIZE[32002]</label>
+				</control>
+				<control type="radiobutton" id="1050"> <!-- Next Up Menu Widget -->
+          <visible>System.HasAddon(script.skin.helper.widgets)</visible>
+					<label>Widget Next Up</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(NextUpMenuWidget)</selected>
+					<onclick>Skin.ToggleSetting(NextUpMenuWidget)</onclick>
+				</control>
+				<control type="radiobutton" id="1052"> <!-- Stream Cinema Community Main Menu Widget -->
+          <visible>System.HasAddon(plugin.video.stream-cinema-2-release)</visible>
+					<label>Widget Stream Cinema Community</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(SCCMainMenuWidget)</selected>
+					<onclick>Skin.ToggleSetting(SCCMainMenuWidget)</onclick>
+				</control>
+				<control type="button" id="1053">
+					<visible>Skin.HasSetting(SCCMainMenuWidget)</visible>
+					<label>     - 1.widget </label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.SelectBool(32003, 32004|SCC_news1, 32005|SCC_news_cz1, 32006|SCC_news_tit1, 32007|SCC_last_added1, 32008|SCC_tv_tips1, 16018|SCC_none1)</onclick>
+					<label2>$VAR[SCC_widget1_label]</label2>
+				</control>
+				<control type="button" id="1054">
+					<visible>Skin.HasSetting(SCCMainMenuWidget)</visible>
+					<label>     - 2.widget </label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.SelectBool(32003, 32004|SCC_news2, 32005|SCC_news_cz2, 32006|SCC_news_tit2, 32007|SCC_last_added2, 32008|SCC_tv_tips2, 16018|SCC_none2)</onclick>
+					<label2>$VAR[SCC_widget2_label]</label2>
+				</control>
+				<control type="button" id="1055">
+					<visible>Skin.HasSetting(SCCMainMenuWidget)</visible>
+					<label>     - 3.widget </label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.SelectBool(32003, 32004|SCC_news3, 32005|SCC_news_cz3, 32006|SCC_news_tit3, 32007|SCC_last_added3, 32008|SCC_tv_tips3, 16018|SCC_none3)</onclick>
+					<label2>$VAR[SCC_widget3_label]</label2>
+				</control>
+				<control type="image" id="1060"> <!-- oddělovač -->
+            <visible>System.HasAddon(plugin.video.nextup) | System.HasAddon(plugin.video.stream-cinema) | System.HasAddon(plugin.video.stream-cinema-2-release) | System.HasAddon(plugin.video.stream-cinema) | System.HasAddon(plugin.video.iprima.cz) | System.HasAddon(plugin.video.ivysilani.cz)</visible>
+				    <left>0</left>
+				    <bottom>135</bottom>
+				    <right>0</right>
+				    <height>3</height>
+				    <texture colordiffuse="button_focus" border="2">dialogs/separator-grey.png</texture>
+			    </control> <!-- oddělovač -->
 				<control type="radiobutton" id="621">
 					<label>$LOCALIZE[31008]</label>
 					<include>DefaultSettingButton</include>

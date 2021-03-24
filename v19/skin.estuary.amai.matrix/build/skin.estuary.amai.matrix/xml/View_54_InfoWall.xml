@@ -115,7 +115,8 @@
 			<control type="group">
 				<left>133</left>
 				<top>2</top>
-				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
+				<include condition="Skin.HasSetting(badge_rating) | Skin.HasSetting(badge_userrating)">Badge_Rating</include><!-- Původní hodnocení -->
+				<include condition="Skin.HasSetting(circle_rating)">Circle_Rating</include><!-- Hodnocení v kolečku u widgetů -->
 			</control>
 		</definition>
 	</include>
@@ -162,10 +163,12 @@
 				<texture>overlays/overlayfade.png</texture>
 				<visible>!ListItem.IsParentFolder</visible>
 			</control>
+			<!-- Číslo epizody S00 x e00 -->
 			<control type="label">
 				<left>31</left>
 				<top>178</top>
 				<width>260</width>
+				<textcolor>gold</textcolor>
 				<label>$PARAM[thumb_label]</label>
 				<font>font20_title</font>
 				<shadowcolor>text_shadow</shadowcolor>
@@ -176,7 +179,7 @@
 				<top>175</top>
 				<width>32</width>
 				<height>32</height>
-				<texture>$VAR[WallWatchedIconVar]</texture>
+				<texture colordiffuse="green">$VAR[WallWatchedIconVar]</texture>
 			</control>
 			<control type="textbox">
 				<left>28</left>
@@ -191,16 +194,19 @@
 			</control>
 			<control type="group">
 				<visible>!Window.IsActive(videos)</visible>
+				<!-- Název seriálu -->
 				<control type="label">
 					<left>29</left>
 					<top>210</top>
 					<width>260</width>
 					<label>$PARAM[sub_label]</label>
+					<textcolor>gold</textcolor>
 					<font>font12</font>
 					<shadowcolor>text_shadow</shadowcolor>
 					<scroll>$PARAM[focused]</scroll>
 					<align>center</align>
 				</control>
+				<!-- Název epizody -->
 				<control type="label">
 					<left>29</left>
 					<top>240</top>
@@ -225,7 +231,8 @@
 			<control type="group">
 				<left>134</left>
 				<top>8</top>
-				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
+				<include condition="Skin.HasSetting(badge_rating) | Skin.HasSetting(badge_userrating)">Badge_Rating</include><!-- Původní hodnocení -->
+				<include condition="Skin.HasSetting(circle_rating)">Circle_Rating</include><!-- Hodnocení v kolečku u widgetů -->
 			</control>
 		</definition>
 	</include>
@@ -310,53 +317,46 @@
 			<control type="group">
 				<visible>String.IsEqual(ListItem.DBtype,tvshow)</visible>
 				<top>320</top>
-				<control type="image">
+				<control type="image"> <!-- Stín dole na plakátu -->
 					<left>35</left>
 					<top>0</top>
 					<width>250</width>
-					<height>50</height>
+					<height>70</height>
 					<texture colordiffuse="CCFFFFFF">overlays/overlayfade.png</texture>
 					<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
 				</control>
-				<control type="label">
-					<left>0</left>
-					<top>20</top>
+				<control type="label"> <!-- Počet epizod/ total epizody -->
+					<left>30</left>
+					<top>38</top>
 					<width>244</width>
 					<label>$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</label>
-					<font>font20_title</font>
+					<font>font25_title</font>
+					<textcolor>gold</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<align>right</align>
 				</control>
-				<control type="image">
+<!--				<control type="image"> Zobrazení oka - nepotřebné
 					<left>254</left>
 					<top>23</top>
 					<width>24</width>
 					<height>24</height>
 					<texture>lists/played-total.png</texture>
-				</control>
+			</control> -->
 			</control>
 			<control type="image">
 				<left>35</left>
 				<top>338</top>
 				<width>32</width>
 				<height>32</height>
-				<texture>$VAR[WallWatchedIconVar]</texture>
+				<texture colordiffuse="green">$VAR[WallWatchedIconVar]</texture>
 			</control>
 			<control type="group">
 				<left>135</left>
 				<top>-8</top>
-				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
+				<include condition="Skin.HasSetting(badge_rating) | Skin.HasSetting(badge_userrating)">Badge_Rating</include><!-- Původní hodnocení -->
+				<include condition="Skin.HasSetting(circle_rating)">Circle_Rating</include><!-- Hodnocení v kolečku u widgetů -->
+				<include condition="Skin.HasSetting(star_rating)">Star_Rating</include><!-- Hodnocení hvězdy -->
 			</control>
-			<control type="group"> <!-- Hodnocení v kolečku u widgetů -->
-				<left>117</left>
-				<top>-8</top>
-				<include condition="Skin.HasSetting(widget_rating)">Widget_Rating</include>
-			</control> <!-- Hodnocení v kolečku u widgetů -->
-			<control type="group"> <!-- Hodnocení hvězdy -->
-				<left>35</left>
-				<bottom>0</bottom>
-				<include condition="Skin.HasSetting(star_rating)">Star_Rating</include>
-			</control> <!-- Hodnocení hvězdy -->
 			<control type="progress">
 				<left>35</left>
 				<top>350</top>

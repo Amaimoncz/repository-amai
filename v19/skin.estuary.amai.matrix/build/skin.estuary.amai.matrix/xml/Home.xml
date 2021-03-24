@@ -857,6 +857,32 @@
 						<param name="visible_3" value="System.HasMediaAudioCD"/>
 					</include>
 				</control>
+				<control type="group" id="50000"><!--SCC Widget -->
+					<visible>String.IsEqual(Container(9000).ListItem.Property(id),SCC)</visible>
+					<include content="Visible_Right_Delayed">
+						<param name="id" value="SCC"/>
+					</include>
+					<include>MainLabel_Home</include><!-- hlavni nadpis na home obrazovce -->
+					<control type="grouplist" id="50001">
+						<include>WidgetGroupListCommon</include>
+						<pagecontrol>50010</pagecontrol>
+						<include content="WidgetListPoster" condition="Skin.HasSetting(SCCMainMenuWidget) + !Skin.HasSetting(SCC_none1)">
+							<param name="content_path" value="$VAR[SCC_path1]"/>
+							<param name="widget_header" value="$VAR[SCC_widget1_label]"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="50100"/>
+						</include>
+						<include content="WidgetListPoster" condition="Skin.HasSetting(SCCMainMenuWidget) + !Skin.HasSetting(SCC_none2)">
+							<param name="content_path" value="$VAR[SCC_path2]"/>
+							<param name="widget_header" value="$VAR[SCC_widget2_label]"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="50200"/>
+						</include>
+							<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
+								<param name="scrollbar_id" value="50010"/>
+						</include>
+					</control>
+				</control><!--SCC Widget -->
 			</control>
 			<control type="group">
 				<depth>DepthContentPanel</depth>
@@ -961,6 +987,14 @@
 							<thumb>icons/sidemenu/tv.png</thumb>
 							<property name="id">tvshows</property>
 							<visible>!Skin.HasSetting(HomeMenuNoTVShowButton)</visible>
+						</item>
+						<item>
+							<!-- <label>Stream Cinema Community</label> -->
+							<onclick>RunAddon(plugin.video.stream-cinema-2-release)</onclick>
+							<property name="menu_id">$NUMBER[50000]</property>
+							<thumb>icons/sidemenu/movies.png</thumb>
+							<property name="id">SCC</property>
+							<visible>Skin.HasSetting(SCCMainMenuWidget)</visible>
 						</item>
 						<item>
 							<!-- <label>$LOCALIZE[2]</label> -->

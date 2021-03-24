@@ -38,7 +38,8 @@
 				<control type="group">
 					<left>600</left>
 					<top>82</top>
-					<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
+					<include condition="Skin.HasSetting(badge_rating) | Skin.HasSetting(badge_userrating)">Badge_Rating</include><!-- Původní hodnocení -->
+					<include condition="Skin.HasSetting(circle_rating)">Circle_Rating</include><!-- Hodnocení v kolečku u widgetů -->
 				</control>
 				<control type="textbox">
 					<left>50</left>

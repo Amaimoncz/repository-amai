@@ -188,7 +188,7 @@
 		<param name="sortby"></param>
 		<param name="visible">True</param>
 		<param name="sortorder">ascending</param>
-		<param name="widget_limit">15</param>
+		<param name="widget_limit">20</param> <!-- počet položek ve widgetu -->
 		<definition>
 			<include content="CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>

@@ -98,15 +98,15 @@
 		<label></label>
 		<font></font>
 	</include>
-	<include name="RatingCircle">
+	<include name="Badge_Rating">
 		<param name="animation">False</param>
 		<definition>
 			<control type="group">
 				<animation effect="fade" time="0" condition="$PARAM[animation]">VisibleChange</animation>
-				<include content="UserRatingContent" condition="Skin.HasSetting(circle_userrating)">
+				<include content="UserRatingContent" condition="Skin.HasSetting(badge_userrating)">
 					<param name="infolabel" value="ListItem.UserRating" />
 				</include>
-				<include content="UserRatingContent" condition="Skin.HasSetting(circle_rating)">
+				<include content="UserRatingContent" condition="Skin.HasSetting(badge_rating)">
 					<param name="infolabel" value="ListItem.Rating" />
 				</include>
 			</control>
@@ -133,24 +133,24 @@
 			<label>$INFO[$PARAM[infolabel]]</label>
 		</control>
 	</include>
-	<include name="Widget_Rating"> <!-- Hodnocení u widgetů  v kolečku -->
+	<include name="Circle_Rating"> <!-- Hodnocení u widgetů  v kolečku -->
       <control type="image">
         <visible>!String.IsEmpty(ListItem.Rating)</visible>
-        <bottom>65</bottom>
-        <left>3</left>
-        <height>80</height>
-        <width>80</width>
+        <top>-9</top>
+        <left>-10</left>
+        <height>70</height>
+        <width>70</width>
         <texture background="true" colordiffuse="button_focus">rating_bg.png</texture>
       </control>
       <control type="label">
         <visible>!String.IsEmpty(ListItem.Rating)</visible>
-				<left>3</left>
-				<bottom>65</bottom>
-		   	<width>80</width>
-       	<height>80</height>
+				<top>-9</top>
+				<left>-10</left>
+		   	<width>70</width>
+       	<height>70</height>
        	<textcolor>white</textcolor>
 			 	<label>$INFO[ListItem.Rating]</label>
-			 	<font>font30_title</font>
+			 	<font>font25_title</font>
 			 	<shadowcolor>text_shadow</shadowcolor>
 		   	<align>center</align>
        	<aligny>center</aligny>
@@ -159,16 +159,17 @@
 	<include name="Star_Rating"><!-- Hodnocení hvězdy -->
 		<visible>!String.IsEmpty(ListItem.Rating)</visible>
 		<control type="image">
-				<top>10</top>
+				<top>17</top>
+				<left>-100</left>
 				<width>250</width>
 				<height>100</height>
 				<texture flipy="true">overlays/overlayfade.png</texture>
 			</control>
 			<control type="image">
-				<left>5</left>
-				<top>10</top>
-				<height>45</height>
-				<width>240</width>
+				<left>-45</left>
+				<top>18</top>
+				<height>25</height>
+				<width>140</width>
 				<texture>ratings/star_rating/$INFO[ListItem.Rating].png</texture>
 			</control>
 	</include><!-- Hodnocení hvězdy -->

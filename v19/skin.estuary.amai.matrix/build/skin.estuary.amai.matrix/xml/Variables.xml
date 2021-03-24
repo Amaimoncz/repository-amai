@@ -157,9 +157,9 @@
 		<value>$INFO[ListItem.AddonCreator,, - ]$INFO[ListItem.AddonVersion]</value>
 	</variable>
 	<variable name="RatingSettingLabel2Var"><!-- Hodnocení volba -->
-		<value condition="Skin.HasSetting(circle_rating)">$LOCALIZE[563]</value>
-		<value condition="Skin.HasSetting(circle_userrating)">$LOCALIZE[38018]</value>
-		<value condition="Skin.HasSetting(widget_rating)">$LOCALIZE[32000]</value><!-- hodnocení kruh -->
+		<value condition="Skin.HasSetting(badge_rating)">$LOCALIZE[563]</value>
+		<value condition="Skin.HasSetting(badge_userrating)">$LOCALIZE[38018]</value>
+		<value condition="Skin.HasSetting(circle_rating)">$LOCALIZE[32000]</value><!-- hodnocení kruh -->
 		<value condition="Skin.HasSetting(star_rating)">$LOCALIZE[32001]</value><!-- hodnocení hvězdy -->
 		<value>$LOCALIZE[16018]</value>
 	</variable>
@@ -578,5 +578,46 @@
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),video)">$LOCALIZE[3]</value><!-- videa -->
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),favorites)">$LOCALIZE[10134]</value><!-- oblíbené -->
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),weather)">$LOCALIZE[8]</value><!-- počasí -->
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),SCC)">Stream Cinema Community</value><!-- počasí -->
+	</variable>
+	<variable name="SCC_widget1_label">
+		<value condition="Skin.HasSetting(SCC_news1)">$LOCALIZE[32004]</value>
+		<value condition="Skin.HasSetting(SCC_news_cz1)">$LOCALIZE[32005]</value>
+		<value condition="Skin.HasSetting(SCC_news_tit1)">$LOCALIZE[32006]</value>
+		<value condition="Skin.HasSetting(SCC_last_added1)">$LOCALIZE[32007]</value>
+		<value condition="Skin.HasSetting(SCC_tv_tips1)">$LOCALIZE[32008]</value>
+		<value condition="Skin.HasSetting(SCC_none1)">$LOCALIZE[16018]</value>
+	</variable>
+	<variable name="SCC_widget2_label">
+		<value condition="Skin.HasSetting(SCC_news2)">$LOCALIZE[32004]</value>
+		<value condition="Skin.HasSetting(SCC_news_cz2)">$LOCALIZE[32005]</value>
+		<value condition="Skin.HasSetting(SCC_news_tit2)">$LOCALIZE[32006]</value>
+		<value condition="Skin.HasSetting(SCC_last_added2)">$LOCALIZE[32007]</value>
+		<value condition="Skin.HasSetting(SCC_tv_tips2)">$LOCALIZE[32008]</value>
+		<value condition="Skin.HasSetting(SCC_none2)">$LOCALIZE[16018]</value>
+	</variable>
+	<variable name="SCC_widget3_label">
+		<value condition="Skin.HasSetting(SCC_news3)">$LOCALIZE[32004]</value>
+		<value condition="Skin.HasSetting(SCC_news_cz3)">$LOCALIZE[32005]</value>
+		<value condition="Skin.HasSetting(SCC_news_tit3)">$LOCALIZE[32006]</value>
+		<value condition="Skin.HasSetting(SCC_last_added3)">$LOCALIZE[32007]</value>
+		<value condition="Skin.HasSetting(SCC_tv_tips3)">$LOCALIZE[32008]</value>
+		<value condition="Skin.HasSetting(SCC_none3)">$LOCALIZE[16018]</value>
+	</variable>
+	<variable name="SCC_path1">
+		<value condition="Skin.HasSetting(SCC_news1)">plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fnews%253Fdays%253D365%2526type%253Dmovie%2526sort%253DdateAdded%2526order%253Ddesc%2526limit%253D50</value>
+		<value condition="Skin.HasSetting(SCC_news_cz1)">plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252FnewsDubbed%253Ftype%253Dmovie%2526lang%253Dcs%2526sort%253DlangDateAdded%2526order%253Ddesc%2526days%253D730%2526limit%253D50</value>
+		<value condition="Skin.HasSetting(SCC_news_tit1)">plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252FnewsSubs%253Fdays%253D450%2526type%253Dmovie%2526lang%253Dcs%2526sort%253DdateAdded%2526order%253Ddesc%2526limit%253D50</value>
+		<value condition="Skin.HasSetting(SCC_last_added1)">plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fall%253Ftype%253Dmovie%2526sort%253DdateAdded%2526order%253Ddesc%2526limit%253D50</value>
+		<value condition="Skin.HasSetting(SCC_tv_tips1)">plugin://plugin.video.stream-cinema-2-release/csfd_tips/</value>
+		<value condition="Skin.HasSetting(SCC_none1)"></value>
+	</variable>
+	<variable name="SCC_path2">
+		<value condition="Skin.HasSetting(SCC_news2)">plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fnews%253Fdays%253D365%2526type%253Dmovie%2526sort%253DdateAdded%2526order%253Ddesc%2526limit%253D50</value>
+		<value condition="Skin.HasSetting(SCC_news_cz2)">plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252FnewsDubbed%253Ftype%253Dmovie%2526lang%253Dcs%2526sort%253DlangDateAdded%2526order%253Ddesc%2526days%253D730%2526limit%253D50</value>
+		<value condition="Skin.HasSetting(SCC_news_tit2)">plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252FnewsSubs%253Fdays%253D450%2526type%253Dmovie%2526lang%253Dcs%2526sort%253DdateAdded%2526order%253Ddesc%2526limit%253D50</value>
+		<value condition="Skin.HasSetting(SCC_last_added2)">plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fall%253Ftype%253Dmovie%2526sort%253DdateAdded%2526order%253Ddesc%2526limit%253D50</value>
+		<value condition="Skin.HasSetting(SCC_tv_tips2)">plugin://plugin.video.stream-cinema-2-release/csfd_tips/</value>
+		<value condition="Skin.HasSetting(SCC_none2)"></value>
 	</variable>
 </includes>
