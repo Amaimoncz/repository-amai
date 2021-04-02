@@ -858,25 +858,31 @@
 					</include>
 				</control>
 				<control type="group" id="50000"><!--SCC Widget -->
-					<visible>String.IsEqual(Container(9000).ListItem.Property(id),SCC)</visible>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(id),SCC_movies)</visible>
 					<include content="Visible_Right_Delayed">
-						<param name="id" value="SCC"/>
+						<param name="id" value="SCC_movies"/>
 					</include>
 					<include>MainLabel_Home</include><!-- hlavni nadpis na home obrazovce -->
 					<control type="grouplist" id="50001">
 						<include>WidgetGroupListCommon</include>
 						<pagecontrol>50010</pagecontrol>
-						<include content="WidgetListPoster" condition="Skin.HasSetting(SCCMainMenuWidget) + !Skin.HasSetting(SCC_none1)">
-							<param name="content_path" value="$VAR[SCC_path1]"/>
-							<param name="widget_header" value="$VAR[SCC_widget1_label]"/>
+						<include content="WidgetListPoster" condition="Skin.HasSetting(SCCMainMenuWidget_Movies) + !Skin.HasSetting(SCC_movies_none1)">
+							<param name="content_path" value="$VAR[SCC_movies_path1]"/>
+							<param name="widget_header" value="$VAR[SCC_movies_widget1_label]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="50100"/>
 						</include>
-						<include content="WidgetListPoster" condition="Skin.HasSetting(SCCMainMenuWidget) + !Skin.HasSetting(SCC_none2)">
-							<param name="content_path" value="$VAR[SCC_path2]"/>
-							<param name="widget_header" value="$VAR[SCC_widget2_label]"/>
+						<include content="WidgetListPoster" condition="Skin.HasSetting(SCCMainMenuWidget_Movies) + !Skin.HasSetting(SCC_movies_none2)">
+							<param name="content_path" value="$VAR[SCC_movies_path2]"/>
+							<param name="widget_header" value="$VAR[SCC_movies_widget2_label]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="50200"/>
+						</include>
+						<include content="WidgetListPoster" condition="Skin.HasSetting(SCCMainMenuWidget_Movies) + !Skin.HasSetting(SCC_movies_none3)">
+							<param name="content_path" value="$VAR[SCC_movies_path3]"/>
+							<param name="widget_header" value="$VAR[SCC_movies_widget3_label]"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="50300"/>
 						</include>
 							<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 								<param name="scrollbar_id" value="50010"/>
@@ -895,7 +901,7 @@
 					<top>100</top>
 					<width>95</width>
 					<bottom>-10</bottom>
-					<movement>7</movement>
+					<movement>10</movement>
 					<focusposition>0</focusposition>
 					<onfocus>ClearProperty(listposition,home)</onfocus>
 					<onright>SetFocus($INFO[Container(9000).ListItem.Property(menu_id)])</onright>
@@ -989,12 +995,12 @@
 							<visible>!Skin.HasSetting(HomeMenuNoTVShowButton)</visible>
 						</item>
 						<item>
-							<!-- <label>Stream Cinema Community</label> -->
+							<!-- <label>$LOCALIZE[32009]</label> --> <!-- SCC Community - Filmy -->
 							<onclick>RunAddon(plugin.video.stream-cinema-2-release)</onclick>
 							<property name="menu_id">$NUMBER[50000]</property>
-							<thumb>icons/sidemenu/movies.png</thumb>
-							<property name="id">SCC</property>
-							<visible>Skin.HasSetting(SCCMainMenuWidget)</visible>
+							<thumb>icons/others/SCC.png</thumb>
+							<property name="id">SCC_movies</property>
+							<visible>Skin.HasSetting(SCCMainMenuWidget_Movies)</visible>
 						</item>
 						<item>
 							<!-- <label>$LOCALIZE[2]</label> -->

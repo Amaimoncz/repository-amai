@@ -578,46 +578,98 @@
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),video)">$LOCALIZE[3]</value><!-- videa -->
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),favorites)">$LOCALIZE[10134]</value><!-- oblíbené -->
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),weather)">$LOCALIZE[8]</value><!-- počasí -->
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),SCC)">Stream Cinema Community</value><!-- počasí -->
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),SCC_movies)">$LOCALIZE[32009]</value><!-- počasí -->
 	</variable>
-	<variable name="SCC_widget1_label">
-		<value condition="Skin.HasSetting(SCC_news1)">$LOCALIZE[32004]</value>
-		<value condition="Skin.HasSetting(SCC_news_cz1)">$LOCALIZE[32005]</value>
-		<value condition="Skin.HasSetting(SCC_news_tit1)">$LOCALIZE[32006]</value>
-		<value condition="Skin.HasSetting(SCC_last_added1)">$LOCALIZE[32007]</value>
-		<value condition="Skin.HasSetting(SCC_tv_tips1)">$LOCALIZE[32008]</value>
-		<value condition="Skin.HasSetting(SCC_none1)">$LOCALIZE[16018]</value>
+	<variable name="SCC_MOVIES_TRENDS"><!-- Cesty pro SCC Widgety -->
+		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fall%253Ftype%253Dmovie%2526sort%253Dtrending%2526order%253Ddesc%2526limit%253D50</value>
 	</variable>
-	<variable name="SCC_widget2_label">
-		<value condition="Skin.HasSetting(SCC_news2)">$LOCALIZE[32004]</value>
-		<value condition="Skin.HasSetting(SCC_news_cz2)">$LOCALIZE[32005]</value>
-		<value condition="Skin.HasSetting(SCC_news_tit2)">$LOCALIZE[32006]</value>
-		<value condition="Skin.HasSetting(SCC_last_added2)">$LOCALIZE[32007]</value>
-		<value condition="Skin.HasSetting(SCC_tv_tips2)">$LOCALIZE[32008]</value>
-		<value condition="Skin.HasSetting(SCC_none2)">$LOCALIZE[16018]</value>
+	<variable name="SCC_MOVIES_POPULAR">
+		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fall%253Ftype%253Dmovie%2526sort%253Dpopularity%2526order%253Ddesc%2526limit%253D50</value>
 	</variable>
-	<variable name="SCC_widget3_label">
-		<value condition="Skin.HasSetting(SCC_news3)">$LOCALIZE[32004]</value>
-		<value condition="Skin.HasSetting(SCC_news_cz3)">$LOCALIZE[32005]</value>
-		<value condition="Skin.HasSetting(SCC_news_tit3)">$LOCALIZE[32006]</value>
-		<value condition="Skin.HasSetting(SCC_last_added3)">$LOCALIZE[32007]</value>
-		<value condition="Skin.HasSetting(SCC_tv_tips3)">$LOCALIZE[32008]</value>
-		<value condition="Skin.HasSetting(SCC_none3)">$LOCALIZE[16018]</value>
+	<variable name="SCC_MOVIES_MOST_WATCHED">
+		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fall%253Ftype%253Dmovie%2526sort%253DplayCount%2526order%253Ddesc%2526limit%253D50</value>
 	</variable>
-	<variable name="SCC_path1">
-		<value condition="Skin.HasSetting(SCC_news1)">plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fnews%253Fdays%253D365%2526type%253Dmovie%2526sort%253DdateAdded%2526order%253Ddesc%2526limit%253D50</value>
-		<value condition="Skin.HasSetting(SCC_news_cz1)">plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252FnewsDubbed%253Ftype%253Dmovie%2526lang%253Dcs%2526sort%253DlangDateAdded%2526order%253Ddesc%2526days%253D730%2526limit%253D50</value>
-		<value condition="Skin.HasSetting(SCC_news_tit1)">plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252FnewsSubs%253Fdays%253D450%2526type%253Dmovie%2526lang%253Dcs%2526sort%253DdateAdded%2526order%253Ddesc%2526limit%253D50</value>
-		<value condition="Skin.HasSetting(SCC_last_added1)">plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fall%253Ftype%253Dmovie%2526sort%253DdateAdded%2526order%253Ddesc%2526limit%253D50</value>
-		<value condition="Skin.HasSetting(SCC_tv_tips1)">plugin://plugin.video.stream-cinema-2-release/csfd_tips/</value>
-		<value condition="Skin.HasSetting(SCC_none1)"></value>
+	<variable name="SCC_MOVIES_NEWS">
+		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fnews%253Fdays%253D365%2526type%253Dmovie%2526sort%253DdateAdded%2526order%253Ddesc%2526limit%253D50</value>
 	</variable>
-	<variable name="SCC_path2">
-		<value condition="Skin.HasSetting(SCC_news2)">plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fnews%253Fdays%253D365%2526type%253Dmovie%2526sort%253DdateAdded%2526order%253Ddesc%2526limit%253D50</value>
-		<value condition="Skin.HasSetting(SCC_news_cz2)">plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252FnewsDubbed%253Ftype%253Dmovie%2526lang%253Dcs%2526sort%253DlangDateAdded%2526order%253Ddesc%2526days%253D730%2526limit%253D50</value>
-		<value condition="Skin.HasSetting(SCC_news_tit2)">plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252FnewsSubs%253Fdays%253D450%2526type%253Dmovie%2526lang%253Dcs%2526sort%253DdateAdded%2526order%253Ddesc%2526limit%253D50</value>
-		<value condition="Skin.HasSetting(SCC_last_added2)">plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fall%253Ftype%253Dmovie%2526sort%253DdateAdded%2526order%253Ddesc%2526limit%253D50</value>
-		<value condition="Skin.HasSetting(SCC_tv_tips2)">plugin://plugin.video.stream-cinema-2-release/csfd_tips/</value>
-		<value condition="Skin.HasSetting(SCC_none2)"></value>
+	<variable name="SCC_MOVIES_NEWS_CZ">
+		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252FnewsDubbed%253Ftype%253Dmovie%2526lang%253Dcs%2526sort%253DlangDateAdded%2526order%253Ddesc%2526days%253D730%2526limit%253D50</value>
+	</variable>
+	<variable name="SCC_MOVIES_NEWS_TIT">
+		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252FnewsSubs%253Fdays%253D450%2526type%253Dmovie%2526lang%253Dcs%2526sort%253DdateAdded%2526order%253Ddesc%2526limit%253D50</value>
+	</variable>
+	<variable name="SCC_MOVIES_LAST_ADD">
+		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fall%253Ftype%253Dmovie%2526sort%253DdateAdded%2526order%253Ddesc%2526limit%253D50</value>
+	</variable>
+	<variable name="SCC_MOVIES_TV_TIPS">
+		<value>plugin://plugin.video.stream-cinema-2-release/csfd_tips/</value>
+	</variable>
+	<variable name="SCC_movies_widget1_label"><!-- Popisek pro 1 widget SCC Filmy -->
+		<value condition="Skin.HasSetting(SCC_movies_trends1)">$LOCALIZE[32010]</value>
+		<value condition="Skin.HasSetting(SCC_movies_popular1)">$LOCALIZE[32011]</value>
+		<value condition="Skin.HasSetting(SCC_movies_most_watch1)">$LOCALIZE[32012]</value>
+		<value condition="Skin.HasSetting(SCC_movies_news1)">$LOCALIZE[32004]</value>
+		<value condition="Skin.HasSetting(SCC_movies_news_cz1)">$LOCALIZE[32005]</value>
+		<value condition="Skin.HasSetting(SCC_movies_news_tit1)">$LOCALIZE[32006]</value>
+		<value condition="Skin.HasSetting(SCC_movies_last_added1)">$LOCALIZE[32007]</value>
+		<value condition="Skin.HasSetting(SCC_movies_tv_tips1)">$LOCALIZE[32008]</value>
+		<value condition="Skin.HasSetting(SCC_movies_none1)">$LOCALIZE[16018]</value>
+	</variable>
+	<variable name="SCC_movies_widget2_label"><!-- Popisek pro 2 widget SCC Filmy -->
+		<value condition="Skin.HasSetting(SCC_movies_trends2)">$LOCALIZE[32010]</value>
+		<value condition="Skin.HasSetting(SCC_movies_popular2)">$LOCALIZE[32011]</value>
+		<value condition="Skin.HasSetting(SCC_movies_most_watch2)">$LOCALIZE[32012]</value>
+		<value condition="Skin.HasSetting(SCC_movies_news2)">$LOCALIZE[32004]</value>
+		<value condition="Skin.HasSetting(SCC_movies_news_cz2)">$LOCALIZE[32005]</value>
+		<value condition="Skin.HasSetting(SCC_movies_news_tit2)">$LOCALIZE[32006]</value>
+		<value condition="Skin.HasSetting(SCC_movies_last_added2)">$LOCALIZE[32007]</value>
+		<value condition="Skin.HasSetting(SCC_movies_tv_tips2)">$LOCALIZE[32008]</value>
+		<value condition="Skin.HasSetting(SCC_movies_none2)">$LOCALIZE[16018]</value>
+	</variable>
+	<variable name="SCC_movies_widget3_label"><!-- Popisek pro 3 widget SCC Filmy -->
+		<value condition="Skin.HasSetting(SCC_movies_trends3)">$LOCALIZE[32010]</value>
+		<value condition="Skin.HasSetting(SCC_movies_popular3)">$LOCALIZE[32011]</value>
+		<value condition="Skin.HasSetting(SCC_movies_most_watch3)">$LOCALIZE[32012]</value>
+		<value condition="Skin.HasSetting(SCC_movies_news3)">$LOCALIZE[32004]</value>
+		<value condition="Skin.HasSetting(SCC_movies_news_cz3)">$LOCALIZE[32005]</value>
+		<value condition="Skin.HasSetting(SCC_movies_news_tit3)">$LOCALIZE[32006]</value>
+		<value condition="Skin.HasSetting(SCC_movies_last_added3)">$LOCALIZE[32007]</value>
+		<value condition="Skin.HasSetting(SCC_movies_tv_tips3)">$LOCALIZE[32008]</value>
+		<value condition="Skin.HasSetting(SCC_movies_none3)">$LOCALIZE[16018]</value>
+	</variable>
+	<variable name="SCC_movies_path1"><!-- Cesta pro 1 widget SCC Filmy -->
+		<value condition="Skin.HasSetting(SCC_movies_trends1)">$VAR[SCC_MOVIES_TRENDS]</value>
+		<value condition="Skin.HasSetting(SCC_movies_popular1)">$VAR[SCC_MOVIES_POPULAR]</value>
+		<value condition="Skin.HasSetting(SCC_movies_most_watch1)">$VAR[SCC_MOVIES_MOST_WATCHED]</value>
+		<value condition="Skin.HasSetting(SCC_movies_news1)">$VAR[SCC_MOVIES_NEWS]</value>
+		<value condition="Skin.HasSetting(SCC_movies_news_cz1)">$VAR[SCC_MOVIES_NEWS_CZ]</value>
+		<value condition="Skin.HasSetting(SCC_movies_news_tit1)">$VAR[SCC_MOVIES_NEWS_TIT]</value>
+		<value condition="Skin.HasSetting(SCC_movies_last_added1)">$VAR[SCC_MOVIES_LAST_ADD]</value>
+		<value condition="Skin.HasSetting(SCC_movies_tv_tips1)">$VAR[SCC_MOVIES_TV_TIPS]</value>
+		<value condition="Skin.HasSetting(SCC_movies_none1)"></value>
+	</variable>
+	<variable name="SCC_movies_path2"><!-- Cesta pro 2 widget SCC Filmy -->
+		<value condition="Skin.HasSetting(SCC_movies_none1)"></value>
+		<value condition="Skin.HasSetting(SCC_movies_trends2)">$VAR[SCC_MOVIES_TRENDS]</value>
+		<value condition="Skin.HasSetting(SCC_movies_popular2)">$VAR[SCC_MOVIES_POPULAR]</value>
+		<value condition="Skin.HasSetting(SCC_movies_most_watch2)">$VAR[SCC_MOVIES_MOST_WATCHED]</value>
+		<value condition="Skin.HasSetting(SCC_movies_news2)">$VAR[SCC_MOVIES_NEWS]</value>
+		<value condition="Skin.HasSetting(SCC_movies_news_cz2)">$VAR[SCC_MOVIES_NEWS_CZ]</value>
+		<value condition="Skin.HasSetting(SCC_movies_news_tit2)">$VAR[SCC_MOVIES_NEWS_TIT]</value>
+		<value condition="Skin.HasSetting(SCC_movies_last_added2)">$VAR[SCC_MOVIES_LAST_ADD]</value>
+		<value condition="Skin.HasSetting(SCC_movies_tv_tips2)">$VAR[SCC_MOVIES_TV_TIPS]</value>
+		<value condition="Skin.HasSetting(SCC_movies_none2)"></value>
+	</variable>
+	<variable name="SCC_movies_path3"><!-- Cestak pro 3 widget SCC Filmy -->
+		<value condition="Skin.HasSetting(SCC_movies_none2)"></value>
+		<value condition="Skin.HasSetting(SCC_movies_trends3)">$VAR[SCC_MOVIES_TRENDS]</value>
+		<value condition="Skin.HasSetting(SCC_movies_popular3)">$VAR[SCC_MOVIES_POPULAR]</value>
+		<value condition="Skin.HasSetting(SCC_movies_most_watch3)">$VAR[SCC_MOVIES_MOST_WATCHED]</value>
+		<value condition="Skin.HasSetting(SCC_movies_news3)">$VAR[SCC_MOVIES_NEWS]</value>
+		<value condition="Skin.HasSetting(SCC_movies_news_cz3)">$VAR[SCC_MOVIES_NEWS_CZ]</value>
+		<value condition="Skin.HasSetting(SCC_movies_news_tit3)">$VAR[SCC_MOVIES_NEWS_TIT]</value>
+		<value condition="Skin.HasSetting(SCC_movies_last_added3)">$VAR[SCC_MOVIES_LAST_ADD]</value>
+		<value condition="Skin.HasSetting(SCC_movies_tv_tips3)">$VAR[SCC_MOVIES_TV_TIPS]</value>
+		<value condition="Skin.HasSetting(SCC_movies_none3)"></value>
 	</variable>
 </includes>

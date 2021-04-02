@@ -577,8 +577,8 @@ msgid "Setting widgets on the main screen"
 msgstr "Nastavení widgetů na hlavní obrazovce"
 
 msgctxt "#32003"
-msgid "Setting widget  SCC content"
-msgstr "Nastavení obsahu widgetu SCC"
+msgid "Setting widget ontent SCC Movies"
+msgstr "Nastavení obsahu widgetu SCC - Filmy"
 
 msgctxt "#32004"
 msgid "News"
@@ -599,3 +599,19 @@ msgstr "Poslední přidané"
 msgctxt "#32008"
 msgid "TV tips today"
 msgstr "TV Tipy dnes"
+
+msgctxt "#32009"
+msgid "Stream Cinema Community - Movies"
+msgstr "Stream Cinema Community - Filmy"
+
+msgctxt "#32010"
+msgid "Trends"
+msgstr "Trendy"
+
+msgctxt "#32011"
+msgid "Popular"
+msgstr "Populární"
+
+msgctxt "#32012"
+msgid "Most watched"
+msgstr "Nejsledovanější"

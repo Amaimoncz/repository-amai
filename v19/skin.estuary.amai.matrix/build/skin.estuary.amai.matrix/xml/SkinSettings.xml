@@ -180,33 +180,33 @@
 					<selected>Skin.HasSetting(NextUpMenuWidget)</selected>
 					<onclick>Skin.ToggleSetting(NextUpMenuWidget)</onclick>
 				</control>
-				<control type="radiobutton" id="1052"> <!-- Stream Cinema Community Main Menu Widget -->
+				<control type="radiobutton" id="1052"> <!-- Stream Cinema Community Movies Main Menu Widget -->
           <visible>System.HasAddon(plugin.video.stream-cinema-2-release)</visible>
-					<label>Widget Stream Cinema Community</label>
+					<label>Widget Stream Cinema Community  -  Filmy</label>
 					<include>DefaultSettingButton</include>
-					<selected>Skin.HasSetting(SCCMainMenuWidget)</selected>
-					<onclick>Skin.ToggleSetting(SCCMainMenuWidget)</onclick>
+					<selected>Skin.HasSetting(SCCMainMenuWidget_Movies)</selected>
+					<onclick>Skin.ToggleSetting(SCCMainMenuWidget_Movies)</onclick>
 				</control>
-				<control type="button" id="1053">
-					<visible>Skin.HasSetting(SCCMainMenuWidget)</visible>
+				<control type="button" id="1053"><!-- Nastavení 1 widgetu SCC Filmy -->
+					<visible>Skin.HasSetting(SCCMainMenuWidget_Movies)</visible>
 					<label>     - 1.widget </label>
 					<include>DefaultSettingButton</include>
-					<onclick>Skin.SelectBool(32003, 32004|SCC_news1, 32005|SCC_news_cz1, 32006|SCC_news_tit1, 32007|SCC_last_added1, 32008|SCC_tv_tips1, 16018|SCC_none1)</onclick>
-					<label2>$VAR[SCC_widget1_label]</label2>
+					<onclick>Skin.SelectBool(32003, 32010|SCC_movies_trends1, 32011|SCC_movies_popular1, 32012|SCC_movies_most_watch1, 32004|SCC_movies_news1, 32005|SCC_movies_news_cz1, 32006|SCC_movies_news_tit1, 32007|SCC_movies_last_added1, 32008|SCC_movies_tv_tips1, 16018|SCC_movies_none1)</onclick>
+					<label2>$VAR[SCC_movies_widget1_label]</label2>
 				</control>
-				<control type="button" id="1054">
-					<visible>Skin.HasSetting(SCCMainMenuWidget)</visible>
+				<control type="button" id="1054"><!-- Nastavení 2 widgetu SCC Filmy -->
+					<visible>Skin.HasSetting(SCCMainMenuWidget_Movies) + !Skin.HasSetting(SCC_movies_none1)</visible>
 					<label>     - 2.widget </label>
 					<include>DefaultSettingButton</include>
-					<onclick>Skin.SelectBool(32003, 32004|SCC_news2, 32005|SCC_news_cz2, 32006|SCC_news_tit2, 32007|SCC_last_added2, 32008|SCC_tv_tips2, 16018|SCC_none2)</onclick>
-					<label2>$VAR[SCC_widget2_label]</label2>
+					<onclick>Skin.SelectBool(32003, 32010|SCC_movies_trends2, 32011|SCC_movies_popular2, 32012|SCC_movies_most_watch2, 32004|SCC_movies_news2, 32005|SCC_movies_news_cz2, 32006|SCC_movies_news_tit2, 32007|SCC_movies_last_added2, 32008|SCC_movies_tv_tips2, 16018|SCC_movies_none2)</onclick>
+					<label2>$VAR[SCC_movies_widget2_label]</label2>
 				</control>
-				<control type="button" id="1055">
-					<visible>Skin.HasSetting(SCCMainMenuWidget)</visible>
+				<control type="button" id="1055"><!-- Nastavení 3 widgetu SCC Filmy -->
+					<visible>Skin.HasSetting(SCCMainMenuWidget_Movies)+ !Skin.HasSetting(SCC_movies_none1) + !Skin.HasSetting(SCC_movies_none2)</visible>
 					<label>     - 3.widget </label>
 					<include>DefaultSettingButton</include>
-					<onclick>Skin.SelectBool(32003, 32004|SCC_news3, 32005|SCC_news_cz3, 32006|SCC_news_tit3, 32007|SCC_last_added3, 32008|SCC_tv_tips3, 16018|SCC_none3)</onclick>
-					<label2>$VAR[SCC_widget3_label]</label2>
+					<onclick>Skin.SelectBool(32003, 32010|SCC_movies_trends3, 32011|SCC_movies_popular3, 32012|SCC_movies_most_watch3, 32004|SCC_movies_news3, 32005|SCC_movies_news_cz3, 32006|SCC_movies_news_tit3, 32007|SCC_movies_last_added3, 32008|SCC_movies_tv_tips3, 16018|SCC_movies_none3)</onclick>
+					<label2>$VAR[SCC_movies_widget3_label]</label2>
 				</control>
 				<control type="image" id="1060"> <!-- oddělovač -->
             <visible>System.HasAddon(plugin.video.nextup) | System.HasAddon(plugin.video.stream-cinema) | System.HasAddon(plugin.video.stream-cinema-2-release) | System.HasAddon(plugin.video.stream-cinema) | System.HasAddon(plugin.video.iprima.cz) | System.HasAddon(plugin.video.ivysilani.cz)</visible>
