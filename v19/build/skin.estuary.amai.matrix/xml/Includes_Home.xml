@@ -14,8 +14,8 @@
 		<param name="item_treshold">0</param>
 		<definition>
 			<control type="label" id="$PARAM[list_id]666">
-				<left>95</left>
-				<top>100</top>
+				<left>63</left>
+				<top>60</top><!-- 95 - odsazeni od horniho oraje -->
 				<width>900</width>
 				<height>100</height>
 				<font>font36_title</font>
@@ -73,11 +73,11 @@
 				<param name="posy" value="250"/>
 			</include>
 			<control type="panel" id="$PARAM[list_id]">
-				<left>0</left>
-				<top>115</top>
+				<left>-40</left><!-- 0 - odsazeni od leveho okraje -->
+				<top>120</top><!-- 115 - odsazeni od horniho okraje -->
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
 				<right>0</right>
-				<height>503</height>
+				<height>498</height><!-- 503 - vyska widgetu -->
 				<include content="WidgetListCommon">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
