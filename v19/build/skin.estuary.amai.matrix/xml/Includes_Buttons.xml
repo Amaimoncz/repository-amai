@@ -201,6 +201,7 @@
 				<textureradioofffocus>$PARAM[icon]</textureradioofffocus>
 				<textureradiooffnofocus colordiffuse="grey">$PARAM[icon]</textureradiooffnofocus>
 				<visible>$PARAM[visible]</visible>
+				<animation effect="fade" start="0" time="600">Visible</animation>
 			</control>
 		</definition>
 	</include>

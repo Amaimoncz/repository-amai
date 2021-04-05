@@ -1560,4 +1560,9 @@
 			<align>center</align>
 		</control>
 	</include>
+	<include name="Top_gap"><!-- Posunutí textu po vyjetí horního menu -->
+		<animation effect="slide" start="0" end="0,0" time="500" condition="Control.HasFocus(9000)">Conditional</animation>
+		<animation effect="slide" start="0" end="0,60" time="500" condition="Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804) | Control.HasFocus(805)">Conditional</animation>
+		<animation effect="slide" start="0" end="380,0" time="500" condition="Control.HasFocus(5200)">Conditional</animation>
+	</include>
 </includes>

@@ -14,6 +14,7 @@
 		<param name="item_treshold">0</param>
 		<definition>
 			<control type="label" id="$PARAM[list_id]666">
+				<include>Top_gap</include><!-- Posunutí nadpisu dolu po vyjetí menu -->
 				<left>63</left>
 				<top>60</top><!-- 95 - odsazeni od horniho oraje -->
 				<width>900</width>
@@ -73,12 +74,13 @@
 				<param name="posy" value="250"/>
 			</include>
 			<control type="panel" id="$PARAM[list_id]">
+				<include>Top_gap</include>
 				<left>-40</left><!-- 0 - odsazeni od leveho okraje -->
 				<top>120</top><!-- 115 - odsazeni od horniho okraje -->
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
 				<right>0</right>
 				<height>498</height><!-- 503 - vyska widgetu -->
-				<include content="WidgetListCommon">
+				<include content="WidgetListCommon_New">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
 				<itemlayout width="310" height="486">
@@ -982,6 +984,42 @@
 		<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
 		<onback>SetFocus($PARAM[list_id],0,absolute)</onback>
 		<preloaditems>2</preloaditems>
+	</include>
+	<include name="WidgetListCommon_New">
+      <left>0</left>
+      <top>0</top>
+      <visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
+      <height>310</height>
+			<onleft>9000</onleft>
+      <movement>0</movement>
+      <preloaditems>2</preloaditems>
+      <orientation>horizontal</orientation>
+      <scrolltime tween="cubic" easing="out">500</scrolltime>
+			<onback>SetFocus($PARAM[list_id],0,absolute)</onback>
+			<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
+			<animation effect="slide" end="-310,0" time="200" reversible="true" condition="[Integer.IsEqual(Container($PARAM[list_id]).Position,1)]">Conditional</animation>
+			<animation effect="slide" end="-620,0" time="200" reversible="true" condition="[Integer.IsEqual(Container($PARAM[list_id]).Position,2)]">Conditional</animation>
+			<animation effect="slide" end="-930,0" time="200" reversible="true" condition="[Integer.IsEqual(Container($PARAM[list_id]).Position,3)]">Conditional</animation>
+<!--			<animation effect="slide" end="0,0" time="200" reversible="true" condition="[Integer.IsEqual(Container($PARAM[list_id]).Position,1)]">Conditional</animation>
+			<animation effect="slide" end="-310,0" time="200" reversible="true" condition="[Integer.IsEqual(Container($PARAM[list_id]).Position,2)]">Conditional</animation>
+			<animation effect="slide" end="-620,0" time="200" reversible="true" condition="[Integer.IsEqual(Container($PARAM[list_id]).Position,3)]">Conditional</animation>
+			<animation effect="slide" end="-930,0" time="200" reversible="true" condition="[Integer.IsEqual(Container($PARAM[list_id]).Position,4)]">Conditional</animation>
+			<animation effect="slide" end="-1235,0" time="200" reversible="true" condition="[Integer.IsEqual(Container($PARAM[list_id]).Position,5)]">Conditional</animation>
+	 	<animation effect="slide" end="-1545,0" time="200" reversible="true" condition="[Integer.IsEqual(Container($PARAM[list_id]).Position,6)]">Conditional</animation>
+			<animation effect="slide" end="-1850,0" time="200" reversible="true" condition="[Integer.IsEqual(Container($PARAM[list_id]).Position,7)]">Conditional</animation>
+			<animation effect="slide" end="-2160,0" time="200" reversible="true" condition="[Integer.IsEqual(Container($PARAM[list_id]).CurrentItem,8)]">Conditional</animation>
+			<animation effect="slide" end="-2470,0" time="200" reversible="true" condition="[Integer.IsEqual(Container($PARAM[list_id]).CurrentItem,9)]">Conditional</animation>
+			<animation effect="slide" end="-2780,0" time="200" reversible="true" condition="[Integer.IsEqual(Container($PARAM[list_id]).CurrentItem,10)]">Conditional</animation>
+			<animation effect="slide" end="-3090,0" time="200" reversible="true" condition="[Integer.IsEqual(Container($PARAM[list_id]).CurrentItem,11)]">Conditional</animation>
+			<animation effect="slide" end="-3400,0" time="200" reversible="true" condition="[Integer.IsEqual(Container($PARAM[list_id]).CurrentItem,12)]">Conditional</animation>
+			<animation effect="slide" end="-3710,0" time="200" reversible="true" condition="[Integer.IsEqual(Container($PARAM[list_id]).CurrentItem,13)]">Conditional</animation>
+			<animation effect="slide" end="-4020,0" time="200" reversible="true" condition="[Integer.IsEqual(Container($PARAM[list_id]).CurrentItem,14)]">Conditional</animation>
+			<animation effect="slide" end="-4330,0" time="200" reversible="true" condition="[Integer.IsEqual(Container($PARAM[list_id]).CurrentItem,15)]">Conditional</animation>
+			<animation effect="slide" end="-4640,0" time="200" reversible="true" condition="[Integer.IsEqual(Container($PARAM[list_id]).CurrentItem,16)]">Conditional</animation>
+			<animation effect="slide" end="-4950,0" time="200" reversible="true" condition="[Integer.IsEqual(Container($PARAM[list_id]).CurrentItem,17)]">Conditional</animation>
+			<animation effect="slide" end="-5260,0" time="200" reversible="true" condition="[Integer.IsEqual(Container($PARAM[list_id]).CurrentItem,18)]">Conditional</animation>
+			<animation effect="slide" end="-5570,0" time="200" reversible="true" condition="[Integer.IsEqual(Container($PARAM[list_id]).CurrentItem,19)]">Conditional</animation>
+			<animation effect="slide" end="-5880,0" time="200" reversible="true" condition="[Integer.IsEqual(Container($PARAM[list_id]).CurrentItem,20)]">Conditional</animation>-->
 	</include>
 	<include name="BusyListSpinner">
 		<param name="posy">160</param>

@@ -1095,13 +1095,13 @@
 				</control>
 				<control type="group"><!-- Pozadí tlačítek search, update library, settings, poweroff -->
 					<visible>Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804) | Control.HasFocus(805)</visible>
-					<animation effect="slide" start="0,-120" time="100">Visible</animation>
+					<animation effect="fade" start="0" time="600">Visible</animation>
 					<control type="image"><!--pozadí tlačítek vlevo nahoře -->
 						<left>95</left>
 						<top>0</top>
-						<width>275</width>
-						<height>100</height>
-						<texture colordiffuse="51FFFFFF">colors/black.png</texture>
+						<width>300</width>
+						<height>115</height>
+						<texture colordiffuse="FFFFFFFF">dialogs/dialog-bg-nobo.png</texture>
 					</control>
 				</control>
 				<control type="grouplist" id="700">
