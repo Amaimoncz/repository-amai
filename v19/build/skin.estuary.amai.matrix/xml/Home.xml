@@ -1152,7 +1152,30 @@
 					</include>
 				</control>
 			</control>
-			<include>BottomBar</include>
+			<include content="TopBar"><!-- zobrazení casu v pravem horním rohu -->
+				<param name="breadcrumbs_label" value="" />
+			</include>
+			<control type="group"><!-- Widget info pro pravá strana, zobrazení popisu filmu -->
+				<visible>Control.HasFocus(5200)</visible>
+				<animation type="Visible">
+					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
+					<effect type="slide" start="1920" end="1350" time="800" tween="cubic" easing="out" />
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+					<effect type="slide" start="1350" end="1920" time="800" tween="cubic" easing="out" />
+				</animation>
+				<control type="image">
+					<top>0</top>
+					<width>570</width>
+					<bottom>0</bottom>
+					<texture colordiffuse="DFFFFFFF" border="21">colors/black.png</texture>
+				</control>
+				<include content="WidgetInfo">
+          <param name="container_id" value="5200" />
+        </include>
+			</control>
+			<include>BottomBar</include><!-- Spodní lišta -->
 			<control type="group">
 				<depth>DepthBars</depth>
 				<bottom>0</bottom>
@@ -1180,9 +1203,6 @@
 					<animation effect="fade" time="300">VisibleChange</animation>
 				</control>
 			</control>
-			<include content="TopBar">
-				<param name="breadcrumbs_label" value="" />
-			</include>
 			<control type="group">
 				<depth>DepthBars</depth>
 				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
